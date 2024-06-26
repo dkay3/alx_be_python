@@ -3,7 +3,7 @@ def get_clothing_advice():
   Asks the user about the weather and provides clothing recommendations.
   """
   # Get user input for weather conditions
-  weather = input ("What is the weather like today? (sunny/rainy/cold): ")
+  weather = input ("What's the weather like today? (sunny/rainy/cold): ")
 
   # Use if-elif-else statements to provide clothing advice
   if weather == "sunny":
