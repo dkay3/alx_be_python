@@ -16,7 +16,7 @@ def calculate(num1, num2, operator):
             operation = 'multiplication'
         case '/':
             if num2 == 0:
-                return None, 'division by zero'
+                return None, 'Cannot divide by zero.'
             result = num1 / num2
             operation = 'division'
         case _:
@@ -38,11 +38,8 @@ def main():
             if result is None:
                 print(f'Error: {message}')
             else:
-                print(f'The result is {result}')
-
-            another_calculation = input("Do you want to perform another calculation? (yes/no): ").lower()
-            if another_calculation != 'yes':
-                break
+                print(f'The result is {result}.')
+            break
 
         except ValueError:
             print("Error: Please enter valid numbers.")
