@@ -9,12 +9,16 @@ def main():
         print("Please enter a positive integer.")
         return
     
-    # Print the square pattern using nested loops
-    print(f"Square pattern of size {size}:")
-    for i in range(size):
-        for j in range(size):
-            print("* ", end="")
-        print()  # Move to the next line after each row
+    # Print the square pattern using a while loop and nested for loop
+    # print(f"Square pattern of size {size}:")
+    i = 0
+    while i < size:
+        j = 0
+        while j < size:
+            print("*", end=" ")
+            j += 1
+        print()  # Move to the next line after completing the row
+        i += 1
 
 if __name__ == "__main__":
     main()
