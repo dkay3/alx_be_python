@@ -7,7 +7,7 @@ def main():
     # Print the multiplication table using a for loop
     print(num)
     for i in range(1, 11):
-        print(f"{num} x {i} = {num * i}")
+        print(f"{num} * {i} = {num * i}")
 
 if __name__ == "__main__":
     main()
