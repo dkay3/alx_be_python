@@ -2,9 +2,9 @@
 
 def main():
     # Ask the user for task details
-    task = input("Enter your task: ")
-    priority = input("Enter the priority level (low, medium, high): ")
-    time_sensitive = input("Is it time-sensitive? (yes/no): ").lower()
+    Task = input("Enter your task: ")
+    Priority = input("Enter the priority level (low, medium, high): ")
+    Time_Bound = input("Is it time-sensitive? (yes/no): ").lower()
 
     # Validate time_sensitive input
     while time_sensitive not in ['yes', 'no']:
