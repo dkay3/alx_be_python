@@ -3,13 +3,14 @@
 def main():
     # Ask the user for task details
     task = input("Enter your task: ")
+    time_bound = input("Is it time-bound? (yes/no): ").lower()
     priority = input("Enter the priority level (low, medium, high): ")
-    time_bound = input("Is it time-sensitive? (yes/no): ").lower()
+    
 
     # Validate time_sensitive input
     while time_bound not in ['yes', 'no']:
         print("Invalid input. Please enter 'yes' or 'no'.")
-        time_bound = input("Is it time-sensitive? (yes/no): ").lower()
+        time_bound = input("Is it time-bound? (yes/no): ").lower()
 
     # Provide a customized reminder based on inputs
 
