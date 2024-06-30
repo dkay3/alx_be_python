@@ -4,7 +4,7 @@ def main():
     # Ask the user for task details
     task = input("Enter your task: ")
     time_bound = input("Is it time-bound? (yes/no): ").lower()
-    priority = input("Enter the priority level (low, medium, high): ")
+    priority = input("Priority (high/medium/low): ")
     
 
     # Validate time_sensitive input
