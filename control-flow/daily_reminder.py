@@ -22,13 +22,13 @@ def main():
         case 'medium':
             reminder = f"Reminder: '{task}' is a medium priority task."
         case 'low':
-            reminder = f"Reminder: '{task}' is a low priority task."
+            reminder = f"Note: '{task}' is a low priority task."
 
     # Modify reminder based on time-bound status
     if time_bound == 'yes':
         reminder += " This task is  a high priority task that requires immediate attention today!"
     else:
-        reminder += " This task is a low priority task. Consider completing it when you have free time."
+        reminder += "  Consider completing it when you have free time."
 
     print(reminder)
 
