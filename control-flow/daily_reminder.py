@@ -1,21 +1,21 @@
 def main():
     # Ask the user for task details
     task = input("Enter your task: ")
-    time_bound = input("Is it time-bound? (yes/no): ").lower()
+    time_bound = input("Is it time-bound? (yes/no): ").strip().lower()
 
     # Validate time_bound input
     while time_bound not in ['yes', 'no']:
         print("Invalid input. Please enter 'yes' or 'no'.")
-        time_bound = input("Is it time-bound? (yes/no): ").lower()
+        time_bound = input("Is it time-bound? (yes/no): ").strip().lower()
 
-    priority = input("Priority (high/medium/low): ").lower()
+    priority = input("Priority (high/medium/low): ").strip().lower()
 
     # Validate priority input
     while priority not in ['high', 'medium', 'low']:
         print("Invalid priority. Please enter 'high', 'medium', or 'low'.")
-        priority = input("Priority (high/medium/low): ").lower()
+        priority = input("Priority (high/medium/low): ").strip().lower()
 
-    # Provide a customized reminder based on inputs
+    # Generate reminder based on priority using match case
     match priority:
         case 'high':
             reminder = f"Reminder: '{task}' is a high priority task."
@@ -23,8 +23,10 @@ def main():
             reminder = f"Reminder: '{task}' is a medium priority task."
         case 'low':
             reminder = f"Note: '{task}' is a low priority task."
+        case _:
+            reminder = f"Unknown priority: '{task}'"
 
-    # Modify reminder based on time-bound status
+    # Modify reminder based on time-bound status using if statement
     if time_bound == 'yes':
         reminder += " This task requires immediate attention today!"
     else:
