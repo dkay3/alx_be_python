@@ -26,9 +26,9 @@ def main():
 
     # Modify reminder based on time-bound status
     if time_bound == 'yes':
-        reminder += " This task is time-bound and requires immediate attention today!"
+        reminder += " This task is  a high priority task that requires immediate attention today!"
     else:
-        reminder += " This task is not time-bound."
+        reminder += " This task is a low priority task. Consider completing it when you have free time."
 
     print(reminder)
 
