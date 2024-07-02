@@ -34,9 +34,12 @@ def main():
 
         if choice == '1':
             add_item(shopping_list)
+            pass
         elif choice == '2':
+            pass
             remove_item(shopping_list)
         elif choice == '3':
+            pass
             view_list(shopping_list)
         elif choice == '4':
             print("Goodbye!")
