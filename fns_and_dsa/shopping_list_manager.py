@@ -32,20 +32,20 @@ def main():
         display_menu()
         choice = input("Enter your choice: ")
 
-        if choice.isdigit():  # Check if choice is a numeric string
-            if choice == '1':
-                add_item(shopping_list)
-            elif choice == '2':
-                remove_item(shopping_list)
-            elif choice == '3':
-                view_list(shopping_list)
-            elif choice == '4':
-                print("Goodbye!")
-                break
-            else:
-                print("Invalid choice. Please enter a number between 1 and 4.")
+        if choice == '1':
+            add_item(shopping_list)
+            pass
+        elif choice == '2':
+            pass
+            remove_item(shopping_list)
+        elif choice == '3':
+            pass
+            view_list(shopping_list)
+        elif choice == '4':
+            print("Goodbye!")
+            break
         else:
-            print("Invalid input. Please enter a number between 1 and 4.")
+            print("Invalid choice. Please try again.")
 
 if __name__ == "__main__":
     main()
