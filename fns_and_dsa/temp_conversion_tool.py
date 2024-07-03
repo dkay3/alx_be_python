@@ -1,10 +1,9 @@
-# temp_conversion_tool.py
 
 # Define global conversion factors
-FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
-CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
-FAHRENHEIT_OFFSET = 32
-CELSIUS_TO_FAHRENHEIT_FACTOR
+fahrenheit_to_celsius = 5 / 9
+celsius_to_fahrenheit = 9 / 5
+fahrenheit_offset = 32
+
 
 def convert_to_celsius(fahrenheit):
     """
@@ -12,7 +11,7 @@ def convert_to_celsius(fahrenheit):
     
     Formula: C = (F - 32) * (5/9)
     """
-    celsius = (fahrenheit - FAHRENHEIT_OFFSET) * FAHRENHEIT_TO_CELSIUS_FACTOR
+    celsius = (fahrenheit - fahrenheit_offset) * fahrenheit_to_celsius
     return celsius
 
 def convert_to_fahrenheit(celsius):
@@ -21,7 +20,7 @@ def convert_to_fahrenheit(celsius):
     
     Formula: F = C * (9/5) + 32
     """
-    fahrenheit = celsius * CELSIUS_TO_FAHRENHEIT_FACTOR + FAHRENHEIT_OFFSET
+    fahrenheit = celsius * celsius_to_fahrenheit + fahrenheit_offset
     return fahrenheit
 
 def main():
