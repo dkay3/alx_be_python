@@ -2,8 +2,6 @@
 
 # Define global conversion factors
 FAHRENHEIT_OFFSET = 32
-FAHRENHEIT_SCALE = 9 / 5
-CELSIUS_SCALE = 5 / 9
 
 def celsius_to_fahrenheit(celsius):
     """
@@ -11,8 +9,8 @@ def celsius_to_fahrenheit(celsius):
     
     Formula: F = C * (9/5) + 32
     """
-    global FAHRENHEIT_SCALE, FAHRENHEIT_OFFSET
-    fahrenheit = celsius * FAHRENHEIT_SCALE + FAHRENHEIT_OFFSET
+    global FAHRENHEIT_OFFSET
+    fahrenheit = celsius * (9 / 5) + FAHRENHEIT_OFFSET
     return fahrenheit
 
 def fahrenheit_to_celsius(fahrenheit):
@@ -21,8 +19,8 @@ def fahrenheit_to_celsius(fahrenheit):
     
     Formula: C = (F - 32) * (5/9)
     """
-    global FAHRENHEIT_OFFSET, CELSIUS_SCALE
-    celsius = (fahrenheit - FAHRENHEIT_OFFSET) * CELSIUS_SCALE
+    global FAHRENHEIT_OFFSET
+    celsius = (fahrenheit - FAHRENHEIT_OFFSET) * (5 / 9)
     return celsius
 
 def main():
