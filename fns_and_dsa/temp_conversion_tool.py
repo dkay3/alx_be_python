@@ -20,7 +20,7 @@ def celsius_to_fahrenheit(celsius):
     
     Formula: F = C * (9/5) + 32
     """
-    fahrenheit = celsius * CELSIUS_TO_FAHRENHEIT_FACTOR + FAHRENHEIT_OFFSET
+    fahrenheit = (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + FAHRENHEIT_OFFSET
     return fahrenheit
 
 def main():
