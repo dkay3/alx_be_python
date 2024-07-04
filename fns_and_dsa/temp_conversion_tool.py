@@ -10,7 +10,7 @@ def fahrenheit_to_celsius(fahrenheit):
     
     Formula: C = (F - 32) * (5/9)
     """
-    global FAHRENHEIT_TO_CELSIUS_FACTOR
+    
     celsius = (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
     return celsius
 
@@ -20,7 +20,7 @@ def celsius_to_fahrenheit(celsius):
     
     Formula: F = C * (9/5) + 32
     """
-    global CELSIUS_TO_FAHRENHEIT_FACTOR
+   
     fahrenheit = celsius * CELSIUS_TO_FAHRENHEIT_FACTOR + 32
     return fahrenheit
 
