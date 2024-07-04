@@ -33,7 +33,7 @@ def main():
         return
 
     # Prompt the user to specify the scale (Celsius or Fahrenheit)
-    scale = input("Is the temperature in Celsius or Fahrenheit? (C/F): ").strip().upper()
+    scale = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().upper()
     
     if scale == 'C':
         # Convert Celsius to Fahrenheit
