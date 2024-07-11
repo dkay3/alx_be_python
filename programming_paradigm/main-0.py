@@ -7,7 +7,7 @@ def print_usage():
     print("Usage:")
     print("  main-0.py deposit <amount>")
     print("  main-0.py withdraw <amount>")
-    print("  main-0.py balance")
+    print("  main-0.py display")
 
 def main():
     account = BankAccount()
@@ -50,7 +50,7 @@ def main():
         else:
             print("Failed to withdraw.")
     
-    elif command == "balance":
+    elif command == "display":
         account.display_balance()
     
     else:
