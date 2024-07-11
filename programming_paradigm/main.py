@@ -5,7 +5,7 @@ from robust_division_calculator import safe_divide
 
 def print_usage():
     print("Usage:")
-    print("  main.py <dividend> <divisor>")
+    print("  main.py <numerator> <denominator>")
 
 def main():
     if len(sys.argv) != 3:

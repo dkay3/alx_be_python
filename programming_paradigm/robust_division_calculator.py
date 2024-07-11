@@ -1,8 +1,8 @@
 # robust_division_calculator.py
 
-def safe_divide(dividend, divisor):
+def safe_divide(numerator, denominator):
     try:
-        result = dividend / divisor
+        result = numerator / denominator
         return result
     except ZeroDivisionError:
         return "Error: Division by zero is not allowed."
