@@ -20,7 +20,7 @@ def main():
         sys.exit(1)
     
     result = safe_divide(dividend, divisor)
-    print(f"Result: {result}")
+    print(f"The result of the division is: {result}")
 
 if __name__ == "__main__":
     main()
