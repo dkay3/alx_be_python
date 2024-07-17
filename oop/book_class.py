@@ -12,9 +12,7 @@ class Book:
     def __str__(self):
         return f"'{self.title}' by {self.author} (published in {self.year})"
     
-    def __del__(self):
-        return f"Deleting({self.year})"
-    
+       
 
     def __eq__(self, other):
         if isinstance(other, Book):
@@ -30,6 +28,9 @@ class Book:
 
     def __hash__(self):
         return hash((self.title, self.author, self.year))
+    
+    def delete(self):
+        print(f"Deleting {self.title}")
 
 # Example usage
 if __name__ == "__main__":
@@ -37,8 +38,8 @@ if __name__ == "__main__":
     book2 = Book("Brave New World", "Aldous Huxley", 1932)
     book3 = Book("1984", "George Orwell", 1949)
 
-    print(book1)  # Output: '1984' by George Orwell (published in 1949)
-    print(repr(book2))  # Output: Book(title='Brave New World', author='Aldous Huxley', year=1932)
+    print(book1)  # Output: 1984 by George Orwell, published in 1949
+    print(repr(book2))  # Output: Book('Brave New World', 'Aldous Huxley', 1932)
 
     print(book1 == book3)  # Output: True
     print(book1 == book2)  # Output: False
@@ -48,3 +49,5 @@ if __name__ == "__main__":
 
     books = {book1, book2, book3}
     print(len(books))  # Output: 2, because book1 and book3 are considered the same book
+
+    book1.delete()  # Output: Deleting 1984
