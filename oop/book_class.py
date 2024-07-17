@@ -1,32 +1,32 @@
 # book_class.py
 
 class Book:
-    def __init__(self, title, author, publication_year):
+    def __init__(self, title, author, year):
         self.title = title
         self.author = author
-        self.publication_year = publication_year
+        self.year = year
 
     def __repr__(self):
-        return f"Book(title='{self.title}', author='{self.author}', publication_year={self.publication_year})"
+        return f"Book(title='{self.title}', author='{self.author}', publication_year={self.year})"
 
     def __str__(self):
-        return f"'{self.title}' by {self.author} (published in {self.publication_year})"
+        return f"'{self.title}' by {self.author} (published in {self.year})"
     
 
     def __eq__(self, other):
         if isinstance(other, Book):
             return (self.title == other.title and 
                     self.author == other.author and 
-                    self.publication_year == other.publication_year)
+                    self.year == other.year)
         return False
 
     def __lt__(self, other):
         if isinstance(other, Book):
-            return self.publication_year < other.publication_year
+            return self.year < other.year
         return NotImplemented
 
     def __hash__(self):
-        return hash((self.title, self.author, self.publication_year))
+        return hash((self.title, self.author, self.year))
 
 # Example usage
 if __name__ == "__main__":
@@ -35,7 +35,7 @@ if __name__ == "__main__":
     book3 = Book("1984", "George Orwell", 1949)
 
     print(book1)  # Output: '1984' by George Orwell (published in 1949)
-    print(repr(book2))  # Output: Book(title='Brave New World', author='Aldous Huxley', publication_year=1932)
+    print(repr(book2))  # Output: Book(title='Brave New World', author='Aldous Huxley', year=1932)
 
     print(book1 == book3)  # Output: True
     print(book1 == book2)  # Output: False
