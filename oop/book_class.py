@@ -7,14 +7,10 @@ class Book:
         self.year = year
 
     def __repr__(self):
-        return f"Book(title='{self.title}', author='{self.author}', publication_year={self.year})"
+        return f"Book('{self.title}', '{self.author}', {self.year})"
 
     def __str__(self):
-        return f"'{self.title}' by {self.author} (published in {self.year})"
-    
-    def __del__(self):
-        return f"Deleting({self.year})"
-    
+        return f"{self.title} by {self.author}, published in {self.year}"
 
     def __eq__(self, other):
         if isinstance(other, Book):
@@ -30,8 +26,8 @@ class Book:
 
     def __hash__(self):
         return hash((self.title, self.author, self.year))
-    
-    def delete(self):
+
+    def __del__(self):
         print(f"Deleting {self.title}")
 
 # Example usage
@@ -52,4 +48,4 @@ if __name__ == "__main__":
     books = {book1, book2, book3}
     print(len(books))  # Output: 2, because book1 and book3 are considered the same book
 
-    book1.delete()  # Output: Deleting 1984
+    del book1  # This will trigger the __del__ method and print "Deleting 1984"
